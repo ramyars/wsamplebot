@@ -17,6 +17,9 @@ request('http://api.openweathermap.org/data/2.5/weather?q='+mycity+'&appid=b7581
   //console.log('body:', body); // Print the HTML for the Google homepage.
   var s=JSON.parse(body); 
   console.log(s.main.temp-273);
+   var b=s.main.temp-273;
+  b=JSON.stringify(b);
+  res.send(b);
 });
 
 })
